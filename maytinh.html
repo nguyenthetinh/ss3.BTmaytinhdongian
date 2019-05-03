@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <fieldset>
+        <legend>maytinh</legend>
+        <input type="text" id="kq">
+        <br/>
+        <br/>
+        <button type="button" value="1" onclick="maytinh('1')">1</button>
+        <button type="button" value="2" onclick="maytinh('2')">2</button>
+        <button type="button" value="3" onclick="maytinh('3')">3</button>
+        <button type="button" value="1" onclick="maytinh('+')">+</button>
+        <br/><br/>
+        <button type="button" value="+" onclick="maytinh('4')">4</button>
+        <button type="button" value="-" onclick="maytinh('5')">5</button>
+        <button type="button" value="/" onclick="maytinh('6')">6</button>
+        <button type="button" value="*" onclick="maytinh('-')">-</button>
+        <br/><br/>
+        <button type="button" value="+" onclick="maytinh('7')">7</button>
+        <button type="button" value="-" onclick="maytinh('8')">8</button>
+        <button type="button" value="/" onclick="maytinh('9')">9</button>
+        <button type="button" value="*" onclick="maytinh('*')">*</button>
+        <br/><br/>
+        <button type="button" value="AC" onclick="reset()">AC</button>
+        <button type="button" value="=" onclick="tinh()">=</button>
+        <button type="button" value="0" onclick="0">0</button>
+        <button type="button" value="/" onclick="/">/</button>
+    </fieldset>
+    <script>
+        function maytinh(ba) {
+            document.getElementById("kq").value+= ba
+        }
+        function reset() {
+            document.getElementById("kq").value=""
+
+        }
+        function tinh() {
+            x=document.getElementById("kq").value
+            y=eval(x)
+            document.getElementById("kq").value=y
+        }
+    </script>
+</form>
+
+</body>
+</html>
